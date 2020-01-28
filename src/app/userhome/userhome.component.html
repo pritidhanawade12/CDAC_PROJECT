@@ -1,0 +1,233 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   
+    .row.content {height: 550px}
+    
+    
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+   
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Hello {{uname}}</h2>
+      <ul class="nav nav-pills nav-stacked">
+
+
+        <li><a href="/updatepassword">Change Password</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+        <li><a (click)="logout()" href="/login">Sign Out</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Select Service</h4>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> 
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+
+
+      <li> <a routerLink="/plans" >Plans</a></li>
+      <li> <a routerLink="/hardware" >Hardware</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+  
+</body>
+</html>
+
+      </div>
+
+      
+ 
+
+
+   
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Total Users</h4>
+            <p>11</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Users Online</h4>
+            <p>5</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Sessions</h4>
+            <p>10 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Bounce</h4>
+            <p>30%</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <div class="image" style="height: 100px;">
+        <a class="navbar-brand" href="#"><img src="http://localhost:53806/Photos/{{Uname}}.jpg" 
+          alt="" style="position: relative; bottom: 10px; left: 50px; height: 65px; width: 65px; text-align: center;"></a>
+      </div>
+      <h4 style="position: absolute; top: 90px; left: 75px;">Customer</h4>
+   
+      <ul class="nav nav-pills nav-stacked">
+        
+        <li><a href="/updatepassword">Change Password</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+        <!-- <li><a (click)="logout()" href="/login">Sign Out</a></li> -->
+        <li> <button type="button" (click)="logout()" class="btn btn-warning">Sign Out</button></li>
+    
+      </ul><br>
+      
+    </div>
+
+
+    <div class="col-sm-8 text-left"> 
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+      
+          <ul class="nav navbar-nav">
+      
+            <h3>select service</h3>
+            <li> <a routerLink="/plans" >Plans</a></li>
+            <li> <a routerLink="/hardware" >Hardware</a></li>
+            
+            
+          </ul>
+        </div>
+      </nav>
+        <div>
+            <img src="assets\phone4.jpg" width="100%" height="400" >
+          </div>
+      <!-- <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p> -->
+    </div>
+    <div class="col-sm-2 sidenav">
+      <!-- <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="container-fluid text-center">
+  <p>  </p>
+  <p>  </p>
+</footer>  -->
+
+</body>
+</html>

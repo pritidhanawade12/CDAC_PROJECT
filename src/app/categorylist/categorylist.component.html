@@ -1,0 +1,22 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>CategoryId</th>  <th>CategoryName</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let T_Categories of data1">
+                <td>{{T_Categories.CategoryId}}</td>
+                <td>{{T_Categories.CategoryName}}</td>
+                <td><a routerLink="/newplan/{{T_Categories.CategoryId}}">Add</a> </td>  
+            </tr>
+        </tbody>
+    </table>
+</div>

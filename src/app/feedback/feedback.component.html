@@ -1,0 +1,29 @@
+
+ <div style="background-color:grey ;height:600px; width: 100%">
+    <div class="login">
+
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)">
+<div class="inputBox">
+    <div  class="form-group">
+        <label for="p">Email Id</label>
+        <input  type="text" class="form-control" name="EmailId"  [(ngModel)]="p">
+    </div>
+
+    <div   class="form-group">
+        <label for="title">Title</label>
+        <input ngModel type="text" class="form-control" id="title" name="title">
+    </div>
+
+    <div  class="form-group">
+        <label for="Description">Description</label>
+        <input ngModel type="text" class="form-control"  name="Description">
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <span>
+        {{message}}
+    </span>
+</form>
+</div>
+</div>

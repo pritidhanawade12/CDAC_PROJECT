@@ -1,0 +1,196 @@
+
+<div style="background-color:grey ;height:600px; width: 100%">
+    <div class="login" >
+        <div class="heading" style="margin-left:75px">
+            <h2>Confirm Payment</h2>
+        </div>
+     
+        <form #myForm="ngForm" (ngSubmit)="Add(myForm)" >
+        
+        
+         
+      
+        
+        <div class="inputBox" >
+        
+            <label for="owner">Card Holder Name</label>
+            <input ngModel type="text" class="form-control" required pattern="[A-Za-z]+"  id="owner" name="owner" #owner="ngModel" #spy>
+            <div *ngIf="owner.invalid && (owner.dirty || owner.touched || owner.pristine)" class="alert alert-danger">
+              <div *ngIf="owner.errors.required">
+                  Name is required.
+              </div>
+              <div *ngIf="owner.errors.pattern">
+                  Allowed only Alphabets
+              </div>
+          </div> 
+
+      </div>
+
+
+        <div class="inputBox" >
+            <label for="CVV">CVV No</label>
+            <input ngModel type="text" class="form-control" required pattern="[0-9]{3}"  maxlength="3" id="MobileNo" name="CVV" #CVV="ngModel">
+            <div *ngIf="CVV.invalid && (CVV.dirty || CVV.touched || CVV.pristine)" class="alert alert-danger">
+              <div *ngIf="CVV.errors.required">
+                  CVV is required.
+              </div>
+              <div *ngIf="CVV.errors.pattern">
+                  Allowed 3 digit number only
+              </div>
+          </div>
+  
+     </div> 
+
+
+          <div class="inputBox" >
+            <label for="CardNo">Card No</label>
+            <input ngModel type="text" class="form-control" required pattern="[0-9]{16}"  maxlength="16" id="CardNo" name="CardNo" #CardNo="ngModel">
+            <div *ngIf="CardNo.invalid && (CardNo.dirty || CardNo.touched || CardNo.pristine)" class="alert alert-danger">
+              <div *ngIf="CardNo.errors.required">
+                  Card No is required.
+              </div>
+              <div *ngIf="CardNo.errors.pattern">
+                  Allowed 16 digit number 
+              </div>
+          </div> 
+           
+         </div>
+      
+        <div class="inputBox">
+            <label>Expiration Date</label>
+            <select>
+                <option value="01">January</option>
+                <option value="02">February </option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select>
+                <option value="16"> 2021</option>
+                <option value="17"> 2022</option>
+                <option value="18"> 2023</option>
+                <option value="19"> 2024</option>
+                <option value="20"> 2025</option>
+                <option value="21"> 2026</option>
+            </select>
+       
+      </div> 
+          
+      <div class="inputBox">
+        <div>
+            <img src="assets\all.png" width="100%" height="100" >
+          </div>
+  
+    </div>
+          
+          <br> 
+
+            <button routerLink="/payment/{{ProductId}}" style="text-align: center;" type="submit" class="btn btn-default" [disabled]="!myForm.form.valid">Confirm</button>
+           
+
+          
+           <span>
+              {{message}}
+          </span>
+      </form>
+    </div>
+    </div> 
+
+
+
+
+<!-- 
+    
+<div class="creditCardForm">
+    <div class="heading" style="margin-left:170px">
+        <h2>Confirm Payment</h2>
+    </div>
+    <div class="payment">
+        <form #myForm="ngForm" (ngSubmit)="Add(myForm)">
+            <div class="form-group owner">
+
+
+            <label for="owner">Card Holder Name</label>
+            <input ngModel type="text" class="form-control" required pattern="[A-Za-z]+"  id="owner" name="owner" #owner="ngModel" #spy>
+            <div *ngIf="owner.invalid && (owner.dirty || owner.touched || owner.pristine)" class="alert alert-danger">
+              <div *ngIf="owner.errors.required">
+                  Name is required.
+              </div>
+              <div *ngIf="owner.errors.pattern">
+                  Allowed only Alphabets
+              </div>
+          </div>     
+      </div>
+
+
+            <div class="form-group CVV" >
+                <label for="CVV">CVV No</label>
+                <input ngModel type="text" class="form-control" required pattern="[0-9]{3}"  maxlength="3" id="MobileNo" name="CVV" #CVV="ngModel">
+                <div *ngIf="CVV.invalid && (CVV.dirty || CVV.touched || CVV.pristine)" class="alert alert-danger">
+                  <div *ngIf="CVV.errors.required">
+                      CVV is required.
+                  </div>
+                  <div *ngIf="CVV.errors.pattern">
+                      Allowed 3 digit number only
+                  </div>
+              </div>  
+             </div>
+
+            <div class="form-group" id="card-number-field">
+                <label for="CardNo">Card No</label>
+                <input ngModel type="text" class="form-control" required pattern="[0-9]{16}"  maxlength="16" id="CardNo" name="CardNo" #CardNo="ngModel">
+                <div *ngIf="CardNo.invalid && (CardNo.dirty || CardNo.touched || CardNo.pristine)" class="alert alert-danger">
+                  <div *ngIf="CardNo.errors.required">
+                      Card No is required.
+                  </div>
+                  <div *ngIf="CardNo.errors.pattern">
+                      Allowed 16 digit number 
+                  </div>
+              </div> 
+            </div>
+
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    <option value="16"> 2021</option>
+                    <option value="17"> 2022</option>
+                    <option value="18"> 2023</option>
+                    <option value="19"> 2024</option>
+                    <option value="20"> 2025</option>
+                    <option value="21"> 2026</option>
+                </select>
+
+            </div>
+            <div class="form-group" id="credit_cards">
+                <div>
+                    <img src="assets\all.png" width="100%" height="100" >
+                  </div> 
+            </div>
+            <div class="form-group" id="pay-now">
+                <button routerLink="/payment/{{ProductId}}" style="text-align: center;" type="submit" class="btn btn-default" [disabled]="!myForm.form.valid">Confirm</button>
+               
+            </div>
+        </form>
+    </div>
+</div>  -->

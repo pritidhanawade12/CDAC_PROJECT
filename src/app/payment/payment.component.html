@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+<div class="login">
+     <div class="inputBox">
+<form #myForm="ngForm" (ngSubmit)="Add(myForm)">
+<table id="t01">
+
+    <tr >
+        <td style="text-align: center;" colspan="2"><h3>Your Invoice</h3></td>
+ 
+      </tr>
+  <tr>
+    <td>Your Choosed Product</td>
+    <td><input [(ngModel)]="ProductName" type="text" class="form-control" name="ProductName" ></td>
+  </tr>
+  <tr>
+    <td>Choosed Product Description</td>
+    <td><input [(ngModel)]="ProductDescription" type="text" class="form-control" name="ProductDescription" ></td>
+  </tr>
+  <tr>
+    <td>Total Price</td>
+    <td><input [(ngModel)]="ProductPrice" type="text" class="form-control" name="ProductPrice" ></td>
+  </tr>
+</table>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

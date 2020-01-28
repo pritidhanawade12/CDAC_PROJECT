@@ -1,0 +1,30 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Plan Name</th>  <th>Description</th> <th>Price</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let T_Products of data2">
+                <td>{{T_Products.ProductName}}</td>
+                <td>{{T_Products.ProductDescription}}</td>
+                <td>{{T_Products.ProductPrice}}</td>
+                <td>
+                    <button type="button" routerLink="/paymentform/{{T_Products.ProductId}}" class="btn btn-primary">Buy</button>
+                </td> 
+                <!-- <td><a routerLink="/edit/{{emp.No}}" >Edit</a> </td>
+                <td>
+                    <button type="button" (click)="Delete(emp.No)" class="btn btn-warning">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+

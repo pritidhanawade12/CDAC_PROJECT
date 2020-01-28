@@ -1,0 +1,29 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>  <th>UserId</th> <th>ChangedOn</th> <th>OldPassword</th> <th>NewPassword</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let T_PasswordHistoryLog of data1">
+                <td>{{T_PasswordHistoryLog.Id}}</td>
+                <td>{{T_PasswordHistoryLog.UserId}}</td>
+                <td>{{T_PasswordHistoryLog.ChangedOn}}</td>
+                <td>{{T_PasswordHistoryLog.OldPassword}}</td>
+                <td>{{T_PasswordHistoryLog.NewPassword}}</td>
+                <!-- <td><a routerLink="/edit/{{emp.No}}" >Edit</a> </td>
+                <td>
+                    <button type="button" (click)="Delete(emp.No)" class="btn btn-warning">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+

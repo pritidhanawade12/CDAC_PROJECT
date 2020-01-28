@@ -1,0 +1,29 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>OrderId</th>  <th>UserId</th> <th>ProductId</th> <th>OrderDate</th> <th>OrderDetails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let txdetails of data1">
+                <td>{{txdetails.OrderId}}</td>
+                <td>{{txdetails.UserId}}</td>
+                <td>{{txdetails.ProductId}}</td>
+                <td>{{txdetails.OrderDate}}</td>
+                <td>{{txdetails.OrderDetails}}</td>
+                <!-- <td><a routerLink="/edit/{{emp.No}}" >Edit</a> </td>
+                <td>
+                    <button type="button" (click)="Delete(emp.No)" class="btn btn-warning">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+

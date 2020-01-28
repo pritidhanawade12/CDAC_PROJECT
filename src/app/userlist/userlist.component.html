@@ -1,0 +1,32 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>UserId</th><th>Profile Photo</th>  <th>EmailId</th> <th>Role Id</th> <th>Name</th> <th>MobileNo</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let T_Users of data1">
+                <td>{{T_Users.UserId}}</td>
+                <td><img src="http://localhost:53806/Photos/{{T_Users.Name}}.jpg" alt="" style="position: relative;
+                left: 15%; height: 70px; width: 70px;"></td>
+                <td>{{T_Users.EmailId}}</td>
+                <td>{{T_Users.RoleId}}</td>
+                <td>{{T_Users.Name}}</td>
+                <td>{{T_Users.MobileNo}}</td>
+                <!-- <td>{{T_Users.IsOnline}}</td> -->
+                <!-- <td><a routerLink="/edit/{{emp.No}}" >Edit</a> </td>
+                <td>
+                    <button type="button" (click)="Delete(emp.No)" class="btn btn-warning">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,42 @@
+
+
+ <div style="background-color:grey ;height:600px; width: 100%">
+    <div class="login" >
+      <!-- <form role="form" #myForm="ngForm" (ngSubmit)="Login(myForm)" > -->
+        <form #myForm="ngForm" (ngSubmit)="Add(myForm)" >
+        
+         
+      
+ <div class="inputBox" >
+                <label for="CategoryId">Category Id</label>
+                <input [(ngModel)]="CategoryId" type="text" class="form-control" name="CategoryId" >
+    </div> 
+
+
+        <div class="inputBox" >
+            <label for="ProductName">Product Name</label>
+            <input ngModel type="text" class="form-control"   id="ProductName" name="ProductName" >
+
+      </div>
+
+
+        <div class="inputBox" >
+          <label for="ProductDescription">Product Description</label>
+          <input ngModel type="text" class="form-control" id="ProductDescription"  name="ProductDescription" >
+     </div> 
+ 
+     <div class="inputBox" >
+        <label for="ProductPrice">Product Price</label>
+        <input ngModel type="text" class="form-control"   id="ProductPrice" name="ProductPrice" >
+
+  </div>
+          
+          <br> 
+      
+          <button style="text-align: center;" type="submit" class="btn btn-primary">Add Product</button>
+          <span>
+              {{message}}
+          </span>
+      </form>
+    </div>
+    </div>
